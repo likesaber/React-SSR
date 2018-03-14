@@ -1,0 +1,81 @@
+@import "../../../styles/pc.less";
+@font-color: red;
+@font-size: 20px;
+.main-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    .head-box {
+        height: 60px;
+        line-height: 60px;
+        padding:0 20px;
+        background: @theme-color;
+        color: #fff;
+    }
+    .content-box {
+        height: 100%;
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        .left-menu {
+            height: 100%;
+            background: #1b243e;
+            color: #fff;
+            transition: width .2s;
+            &.menu-hide {
+                width: 80px;
+                .menu-item{
+                    padding:0;
+                    text-align: center;
+                }
+            }
+            &.menu-open {
+                width: 180px;
+            }
+            .menu-item:first-child{
+                text-align: center;
+            }
+            .menu-item {
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+                padding:0 15px;
+                .item-icon{
+                    display: inline-block;
+                    width: 40px;
+                    text-align: center;
+                    height: 100%;
+                    i{
+                        font-size: 16px;
+                    }
+                }
+                
+                cursor: pointer;
+                border-bottom: 1px solid #797777;
+                &:hover {
+                    background: #797777;
+                }
+            }
+        }
+        .right-content {
+            width: 100%;
+            flex-grow: 1;
+            height: 100%;
+            padding: 20px;
+            // &>span{
+            //     display: inline-block;
+            //     width: 100%;
+            //     height: 100%;
+            // }
+        }
+    }
+}
+
+.examlist{
+  color:red;
+  height: 500px;
+  background: url('../../../assets/img/1.jpg');
+}
