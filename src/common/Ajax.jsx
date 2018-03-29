@@ -39,9 +39,6 @@ export default function (opt) {
     opt.type = opt.dataType || "json";
     delete opt.crossOrigin;
     opt.withCredentials = true;
-    opt.url =
-        (window.PUBLIC_API_SERVER_URL || "http://api.dev.qimooc.wang") +
-        opt.url;
     // 开启跨域
     /*  if (opt.crossOrigin) {
          opt.withCredentials = true;
